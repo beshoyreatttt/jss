@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	</head>
+	<body>
+		<script>
+			function RegDemo()
+			{
+				/*var str="ITI.Assiut";
+				var str2=str.replace(/T/ig,"R");
+				alert(str2);*/
+				var userStr=prompt("enter string");
+				var reg=/^j.*t$/i;
+				if(reg.test(userStr))
+					alert("Match");
+				else
+					alert("Not Match");
+
+			}
+		</script>
+
+		<input type="button" value="click me" onclick="RegDemo()">
+	</body>
+</html>	

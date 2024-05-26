@@ -1,0 +1,30 @@
+<Head>
+<title>
+--Manipulating String Content--
+</title>
+<script>
+	var myStr = "JavaScript string object";
+
+	document.write(myStr+"<br>");
+	
+	document.write("<br>***Using SUBSTRING(0,10)***</br>");
+	document.write(myStr.substring(0,10));
+
+	document.write("<br><br>");
+
+	document.write(myStr);	
+
+	document.write("<br>***Using REPLACE***</br>");
+
+	// Replacing every "i" with "_"
+	var str = myStr.replace(/i/g,"_");
+
+
+	// Then, replacing every "t" with "&"
+	str = str.replace(/t/g,"&");
+	
+	document.write(str);
+	
+	
+</Script>
+</Head>

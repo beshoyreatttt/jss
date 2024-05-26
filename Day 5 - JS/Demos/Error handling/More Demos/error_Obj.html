@@ -1,0 +1,17 @@
+
+<script>
+try {
+  var somearray = null;
+  alert(somearray[18]);
+} catch (e) {
+   if (e instanceof TypeError) {
+      alert("Type error: " + e.message);
+  }
+   finally {
+   somearray = null;
+   alert("Array is set to NULL in the Finally block");
+}
+
+
+}
+</script>

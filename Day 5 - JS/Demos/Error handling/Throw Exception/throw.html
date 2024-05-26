@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+<body>
+<script type="text/javascript">
+//GetTemp();
+function GetTemp()
+{
+	var x=prompt("Enter a temp:","");
+	
+	if(x>60) 
+	{	
+		var myErr=new Error("Very_High_Temp_Err");
+		throw myErr;
+	}
+
+	else if(x<-20)
+	{
+		var myErr=new Error("Very_Low_Temp_Err");
+		throw myErr;
+	}
+	
+		return x;	
+}
+
+</script>
+
+<script>
+function temp()
+{
+	try
+	{ 
+		var t=GetTemp();
+		alert("You enterd" +t +" and data saved successfully")
+	}
+	catch(e)
+	{
+		//alert (e.description);
+		if (e.message=="Very_High_Temp_Err")
+			alert("Very high temp, enter right temp");
+		else if(e.message=="Very_Low_Temp_Err")
+			alert("very Low temp, enter right temp");
+		else
+			alert("Another Error");
+	}
+}
+	
+//GetTemp();
+</script>
+
+<input type="button" value="enter today's temp" onclick="temp()"/>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript" language="javascript">
+			
+			var fruits = ["apple", "strawberry", "banana", "orange", "mango"];
+			
+			//every)(
+			//test every element & return T or F
+			function isStr(val,idx,arr){
+				return typeof val === "string";
+			}
+			
+			document.write(fruits.every(isStr)+"<br/>");//true
+			
+			//some()
+			// returns true if any is true
+			function stWithA(val,idx,arr){
+				return val[0] === "a";
+			}
+			alert(fruits.some(stWithA));//true
+			
+			function stWithG(val,idx,arr){
+				return val[0] === "g";
+			}
+			alert(fruits.some(stWithG));//false
+
+			//foreach()
+			console.log("foreach()");
+			//fruits.forEach(function(value){console.log(value)});
+			fruits.forEach(valDisplay);
+			function valDisplay(value){console.log(value)}
+			
+			//filter()
+			console.log("filter()");
+			//console.log(fruits.filter(function(val){return val[0]==='b'||val[0]==='s'}));
+			console.log(fruits.filter(startsWith_B_or_S));
+			function startsWith_B_or_(val){return val[0]==='b'||val[0]==='s'}
+			
+			//map()
+			console.log("map()");
+			//console.log(fruits.map(function(val){return "I like "+val}));
+			console.log(fruits.map(newArrayMap));
+			function newArrayMap(val){return "I like "+val}
+			
+			
+        </script>
+		
+	</head>
+	<body>
+		
+	</body>
+</html>
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	</head>
+	<body>
+		<script>
+			function RegDemo()
+			{
+				var str="This is a test";
+				//alert(str.replace(/t/gi, "X"));
+				var parts=str.split(/(i|a)/);
+				alert(parts.join("/"));
+			}
+		</script>
+		<form>
+			<input type="text" pattern="[A-Z]{3,}" title="You must enter 3 ore more capital letters "><br>
+			<input type="submit">
+		</form>
+		
+		<input type="button" value="click me" onclick="RegDemo()">
+	</body>
+</html>	

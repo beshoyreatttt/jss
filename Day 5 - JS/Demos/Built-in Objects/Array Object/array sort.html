@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title></title>
+		<script>
+			var arr=[1,10,2,16,5];
+			var alphSortArr=arr.sort();//alphabetic
+
+			console.log("Alphabetic");
+			for (let x in alphSortArr)
+				console.log(alphSortArr[x]);
+
+			var numSortArr=arr.sort(function(a,b){
+				return a-b;
+			});
+			console.log("Numeric");
+			for (let x of numSortArr)
+				console.log(x);
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>
+

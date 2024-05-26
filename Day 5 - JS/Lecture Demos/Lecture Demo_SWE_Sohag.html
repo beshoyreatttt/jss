@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+
+<head>
+    <script>
+        'use strict'
+        // //String
+        // var str = "    abc abx    "; //Value type
+        // console.log(typeof str);
+        // console.log(str.charAt(1));
+
+        // var str2 = new String("xyz"); //Reference type
+        // console.log(typeof str2);
+        // console.log(str2.charAt(1));
+        // //////////////////////////////////////
+
+        // console.log(str.length);
+        // console.log(str.indexOf("r"));
+        // console.log(str.substring(2, 4));
+        // console.log(str.trim());
+
+        // document.write(str.bold().fontcolor("blue"));
+        // document.write(str.link("http://www.google.com"));
+
+
+        // var result = parseInt(str);
+        // //if(result==Number.NaN)
+
+        // console.log(result);
+
+        // var n = 1000000;
+        // console.log(n.toExponential(0));
+
+        // var n2 = 15;
+
+        // console.log(n2.toString(8));
+
+        // console.log(Math.PI)
+
+        // console.log(Math.max(1, 9, 30, 44, 88, 55));
+
+
+        // function myMax() {
+        //     for (let i = 0; i < arguments.length; i++)
+        //         console.log(arguments[i]);
+        // }
+
+        // myMax(1, 2, 367);
+
+
+        // var n = 1.1;
+        // console.log(Math.ceil(n));
+
+        var flag = true;
+        var flag2 = false;
+
+        var stdGrades = [1, 10, 2, 5, 100];
+        //console.log(stdGrades.length);
+
+        // var twoDArray = [
+        //     [2, 3],
+        //     [4, 5],
+        //     [6, 7]
+        // ];
+        // console.log(twoDArray[1][1]);
+
+        // console.log(stdGrades.unshift(10));
+        // console.log(stdGrades.join());
+        //console.log(stdGrades);
+
+        // function mySort(n1, n2) {
+        //     // if (n1 > n2)
+        //     //     return 1;
+        //     // else if (n1 < n2)
+        //     //     return -1;
+        //     // else
+        //     //     return 0;
+
+        //     return n1 - n2;
+        // }
+        // //console.log(mySort);
+        // stdGrades.sort(mySort);
+        // stdGrades.sort(function(n1, n2) {
+        //     return n1 - n2;
+        // });
+        // console.log(stdGrades);
+
+        // var searchResult = stdGrades.find(function(arrElm) {
+        //     return arrElm > 5;
+        // });
+
+        // var filterResult = stdGrades.filter(function(arrElm) {
+        //     return arrElm > 5;
+        // });
+
+        // console.log(searchResult);
+        // console.log(filterResult);
+
+        // var stdGrades2 = [];
+        // stdGrades2["Ahmed"] = "V. Good";
+        // stdGrades2["Ali"] = "Good";
+        // stdGrades2["x"] = "Fair";
+
+        // //console.log(stdGrades2["Ahmed"]);
+
+        // for (let i in stdGrades2) { //return index
+        //     console.log("Grade of " + i + " is " + stdGrades2[i]); //index
+        // }
+
+        // for (let elem of stdGrades) { //return lement, works with normal array
+        //     console.log(elem);
+        // }
+
+        // var std = {
+        //     Name: "Ahmed",
+        //     Age: 18,
+        //     Faculty: {
+        //         Name: "FCI",
+        //         Address: "Assiut"
+        //     },
+        //     skills: ["HTML", "CSS", "JS"],
+        //     printInfo: function() {
+        //         console.log(this.Name);
+        //     }
+        // };
+
+        // var stdArr = [{
+        //     Name: "Ali",
+        //     Age: 18
+        // }, {
+        //     Name: "BB",
+        //     Age: 20
+        // }, {
+        //     Name: "DD",
+        //     Age: 30
+        // }];
+
+        // console.log(stdArr[1].Name);
+
+        // console.log(std.Faculty.Name);
+
+        // console.log(std.skills[1]);
+
+        // for (let s of std.skills)
+        //     console.log(s);
+
+        //std.printInfo();
+
+        //Date
+        // var d = new Date(); //Current date and time of the client
+        // console.log(d.toLocaleString());
+
+        // var d2 = new Date(1995, 11, 1);
+        // console.log(d2.toString());
+        // //d2.setDate(25);
+        // d2.setFullYear(d2.getFullYear() + 10);
+        // console.log(d2.toString());
+
+        // //RegExp
+        // var str = "JavaScript";
+        // var reg = /j.*t/i;
+        // //var reg=new RegExp("j.*t", "i");
+
+        // var matchingRes = reg.test(str);
+        // console.log(matchingRes);
+
+        // var matchArr = str.match(reg);
+
+        // var newStr = str.replace(/[A-Z]/g, "*");
+        // console.log(newStr);
+
+        // var mystring = "JavaScript is a wonderful language";
+
+        // var spilitedArr = mystring.split(" ");
+        // console.log(spilitedArr);
+        //var str = "fsfs";
+        //str.abc();
+        // try {
+        //     //var arr = [1, 2, 3];
+        //     //var index = Number(prompt("Enter needed index"));
+        //     var str = "fsfs";
+        //     str.abc();
+        // } catch (e) {
+        //     alert(e.name);
+        // } finally {
+
+        // }
+
+        // console.log("Test");
+
+        var arr = [{
+            Name: "aa",
+            Grade: 90
+        }, {
+            Name: "bb",
+            Grade: 10
+        }, {
+            Name: "dd",
+            Grade: 60
+        }, {
+            Name: "FF",
+            Grade: 20
+        }];
+
+        var foundStd = arr.find(function(std) {
+            return std.Grade == 60;
+        });
+
+        console.log(foundStd.Name);
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

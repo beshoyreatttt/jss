@@ -1,0 +1,34 @@
+<html>
+<head>
+<script type="text/javascript">
+var txt="";
+function message()
+{
+	try
+	  {
+	  alertttt("Welcome guest!");
+	  }
+
+	catch(e){
+	 alert('An error has occurred: '+e.message)
+	 //throw "err";
+	}
+	finally
+	{
+	//row 
+	 alert('I am alerted regardless of the outcome above')
+	}
+
+	alert("ERROR");//will not interpreted if err is thrown
+
+}
+
+</script>
+</head>
+
+<body>
+<input type="button" value="View message" onclick="message()" />
+</body>
+
+</html>
+

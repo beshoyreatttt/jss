@@ -1,0 +1,55 @@
+<html>
+<head></head>
+<body>
+
+<script type="text/javascript">
+
+    var num = new Number(13.3714);
+
+	document.write("using toPrecision()<br>".bold());
+    document.write(num.toPrecision()+"<br />");//13.3714
+    document.write(num.toPrecision(2)+"<br />");//13
+    document.write(num.toPrecision(3)+"<br />");//13.4
+    document.write(num.toPrecision(10)+"<br /><hr>");//13.37140000
+
+    //var num = new Number(13.3714);
+	//alert(num);
+	document.write("using toFixed()<br>".bold());
+    document.write(num.toFixed()+"<br />");//13
+    document.write(num.toFixed(1)+"<br />");//13.4
+    document.write(num.toFixed(3)+"<br />");//13.371
+    document.write(num.toFixed(10)+"<br /><hr>");//13.3714000000
+
+
+    //var num = new Number(13.3714);
+	//alert(num);
+	document.write("using toExponential()<br>".bold());
+    document.write(num.toExponential()+"<br />");//1.33714e+1
+    document.write(num.toExponential(2)+"<br />");//1.34e+1
+    document.write(num.toExponential(3)+"<br />");//1.337e+1
+    document.write(num.toExponential(10));//1.3371400000e+1
+    /////////////////////////////////////////////////////
+
+    
+    n = 34.8896;
+    alert(n.toPrecision(3)); //34.9
+    alert(n.toFixed(3));//34.890
+	/*
+    n = 56789;
+	alert(typeof n);//number
+    //alert(n.toExponential(2));//5.68e+4
+	
+	n="N";
+	alert(typeof n);//string
+    
+	n = new Number(10);
+    var x = 5 + n;
+    alert(n.valueOf());//10
+	alert(x.valueOf());//15
+	alert(typeof n);//object
+	alert(typeof x)//number
+    */
+
+</script> 
+</body>
+</html>

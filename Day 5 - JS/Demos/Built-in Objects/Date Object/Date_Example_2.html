@@ -1,0 +1,35 @@
+<HTML>
+<Title>--- Date Example 2 ---</Title>
+
+<h2>
+Date Object
+</h2>
+
+<hr>
+<HEAD>
+
+<SCRIPT>
+
+myDate = new Date()
+
+/***********Different Declarations for the Date Object*****************/
+//myDate = new Date("February 1, 2000 17:35:40")
+//myDate = new Date(2000,2,1,17,35,40)
+//myDate = new Date(2000,2,1) // all missing arguments have a value of 0
+
+document.write(myDate + "<br>")
+document.write("The Day in month : " + myDate.getDate() + "<br>") // from 1 to 31
+document.write("The Day in week : " + myDate.getDay() + "<br>") // from 0 to 6
+
+document.write("The time in msec : " + myDate.getTime() + "<br>")
+
+</SCRIPT>
+
+
+</HEAD>
+
+<BODY>
+
+</BODY>
+
+</HTML>

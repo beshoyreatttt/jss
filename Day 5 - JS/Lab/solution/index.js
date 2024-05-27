@@ -151,3 +151,38 @@
 
 
 
+//problem solving
+// let str = 'aaappprrrpppccc';
+// //expected output a3p3r3p3c3
+// let solving ='';
+// let x = 1;
+// for (let i = 0; i < str.length; i++) {
+//   if (str[i] !== str[i+1]) {
+//     solving += `${str[i]}${x}`;
+//     x=1;
+//   }else if(str[i] === str[i+1]){
+//     x++;
+//   }
+  
+// }
+// console.log(solving);
+
+
+
+
+//8-
+let userDate = prompt('Enter date in this format DD-MM-YYYY : ');
+console.log(userDate.length);
+function checkDate(date) {
+  if (date.length === 10&&date[2]=='-'&&date[5] == '-') {
+    let newDate = new Date();
+    let day = parseInt(date[0] +date[1]);
+    let month = parseInt(date[3] +date[4]);
+    let Year= parseInt(date[6] +date[7]+date[8]+date[9]);
+    newDate.setFullYear(Year,month,day);
+    console.log( newDate.toLocaleDateString );
+  }else {
+    console.log('incorrect format');
+  }
+}
+checkDate(userDate);

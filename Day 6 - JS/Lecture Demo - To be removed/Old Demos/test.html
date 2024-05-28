@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div style="height:200px; width:500px;border: 3px blue solid" 
+onmousedown="test(event)"></div>
+<input type="text"  onkeydown="test2(event)">
+<script>
+
+function test(e){
+	//alert(e.offsetX);
+    //alert(e.button)
+}
+
+function test2(e){
+    if(e.key==" ")
+        e.preventDefault();
+}
+
+</script>
+
+</body>
+</html>

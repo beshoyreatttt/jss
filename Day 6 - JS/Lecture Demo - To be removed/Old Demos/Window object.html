@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body onkeydown="openWindow(event)">
+        <button id="b1">stop</button>
+        <a href="" onclick="alert('hello');event.preventDefault()">go to test</a>
+        <br>
+        test<input type"text" onkeydown="event.preventDefault()">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>       
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
+        <div id="test" onmousedown="alert(event.screenX)" onclick="alert(event.type)">this is test</div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<script>
+    //document.getElementById("b1").onclick=testButton;
+
+    document.getElementById("b1").addEventListener("click", testButton);
+    function testButton()
+    {
+        alert("Button clicked!");
+    }
+    function openWindow(e)
+    {
+        if (e.altKey==true && e.key=="w")
+            window.open();
+    }
+   
+</script>
+
+</body>
+</html>

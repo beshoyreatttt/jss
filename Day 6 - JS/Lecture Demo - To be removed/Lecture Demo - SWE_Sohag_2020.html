@@ -1,0 +1,110 @@
+<html>
+
+<head>
+
+</head>
+
+<body onkeydown="checkPressedKey(event)">
+    <a href="?Name=abc&age=20">test link</a>
+    <a href="#d1">test link2</a>
+    <a href="http://www.google.com" onclick="alert('Hi from link');event.preventDefault();">test link2</a>
+    <div> click Alt+C to change the window color.</div>
+    <div></div><br>
+    <input id="t1" type="text">
+
+    <div style="position:fixed">
+
+        This is a test button:
+        <button id="b1" onmousemove="console.log(event.clientX);">test</button><br>
+        <button id="b1" onclick="clearTimeout(timer);">test</button><br>
+
+    </div>
+
+
+
+    <div onmousedown="hideDiv(event)" id="d1" style="width:200px; margin:20px;padding-top:60px">
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consequat erat in elementum sodales. Suspendisse in nisl arcu. Nunc laoreet mattis tortor nec maximus. Nulla suscipit dui eu ipsum mattis sollicitudin. Etiam est leo, varius id fringilla
+        vel, luctus in sem. Vestibulum pharetra, est molestie maximus iaculis, tortor lorem dignissim justo, in posuere risus elit in magna. In mattis, lorem nec consequat volutpat, ex diam volutpat sem, et lobortis nunc neque eget ex. In ut cursus diam,
+        eu lacinia sapien. Phasellus laoreet, ipsum nec porta bibendum, orci ex cursus tortor, vitae ultrices mauris nulla a sem. Aenean gravida rutrum velit non pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut tincidunt nec
+        tortor ac vulputate. Fusce sollicitudin elementum sollicitudin. Pellentesque ultricies ligula sed dignissim sollicitudin. Praesent non faucibus libero, nec aliquam libero. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos. Fusce faucibus elit ut leo facilisis, id vulputate elit tempus. Maecenas quis nisl vulputate, porttitor nunc eget, mollis ante. Ut eget ipsum sagittis, pulvinar mi non, sollicitudin nibh. Nam rhoncus sapien et est mattis consectetur.
+        Sed in tellus elementum, eleifend lectus nec, commodo odio. Nunc at leo laoreet, vehicula dolor id, aliquam nunc. Cras varius porta libero vehicula sagittis. Quisque hendrerit, metus vitae suscipit aliquam, erat erat finibus magna, eu efficitur
+        arcu velit at lacus. Sed ullamcorper dui semper, fermentum mauris non, accumsan risus. Nam at est enim. Donec semper massa velit, ac posuere tellus convallis eu. Vivamus sit amet velit sagittis, efficitur sem in, consequat nulla.
+    </div>
+
+    <script>
+        var newWin;
+
+        // function disableSpace(event) {
+        //     console.log(event.key);
+        // }
+
+        // document.getElementById("t1").onkeydown = disableSpace;
+
+        document.getElementById("t1").onkeydown = function(event) {
+            if (event.key == " ")
+                event.preventDefault();
+            console.log(event.key);
+        }
+
+        function checkPressedKey(event) {
+            if (event.altKey) {
+                switch (event.key) {
+                    case "b":
+                        document.bgColor = "blue";
+                        break;
+
+                    case "r":
+                        document.bgColor = "red";
+                        break;
+
+                    case "g":
+                        document.bgColor = "green";
+                        break;
+                }
+            }
+        }
+
+        function hideDiv(ev) {
+            if (ev.button == 2 && ev.altKey)
+                document.getElementById("d1").style.display = "none";
+        }
+
+        function openNewWindow() {
+            newWin = window.open("", "_blank", "width=300px,height=300px, screenX=300, screenY=200");
+            newWin.document.write("Test");
+        }
+        var timer;
+
+        function test() {
+            //scrollBy(0, 100);
+            //var counter = 0;
+            // timer = setInterval(function() {
+            //     //console.log(counter++);
+            //     window.scrollBy(0, 50);
+            // }, 500)
+
+            // timer = setTimeout(function() {
+            //     openNewWindow();
+            // }, 3000);
+            // console.log("New Window opened");
+
+            // //alert(location.search);
+            // var qString = location.search;
+            // console.log(qString);
+            // var qStringParts = qString.split("&");
+            // console.log(qStringParts);
+            // var usrName = qStringParts[0].split("=")[1];
+            // alert("Welcome: " + usrName);
+
+            //alert(location.hash);
+        }
+
+
+
+        //alert(event.target);
+    </script>
+</body>
+
+</html>

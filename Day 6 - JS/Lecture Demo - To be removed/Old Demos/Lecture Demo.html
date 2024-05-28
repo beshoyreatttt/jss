@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+  var counter=4;
+  var t;
+  function openAd()
+  {
+    document.getElementById("msg").innerHTML="Window will open after 3 seconds";
+    t=setInterval(countDown, 1000);
+
+    setTimeout(function(){
+      window.open();
+      clearInterval(t);
+    },5000);
+  }
+
+  function countDown()
+  {
+    document.getElementById("msg").innerHTML=counter;
+    counter--;
+  }
+</script>
+</head>
+<body onload="openAd()">
+  <div id="msg"></div>
+</body>
+</html>

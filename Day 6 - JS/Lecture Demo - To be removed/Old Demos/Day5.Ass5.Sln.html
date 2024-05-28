@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+do{
+var d=prompt("Enter date: dd-mm-yyyy");
+var flag=false;
+
+	if(d.length==10&&d.charAt(2)=="-" && d.charAt(5)=="-")
+    	{
+        	var dateParts=d.split("-");
+            if(dateParts[0]<=31&&dateParts[1]<=12&&dateParts[2]<=2000)
+            {
+            	var bDate=new Date (dateParts[2], parseInt(dateParts[1])-1, dateParts[0]);
+                flag=true;
+            }
+        }
+}while(!flag);
+
+alert (bDate);
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body onkeydown="testFun(event)">
+
+<h2>The Button Element</h2>
+
+<a href="" onclick="alert('test'); event.preventDefault();">Test link</a>
+
+<br>
+<input type="text" onkeydown="preventSpace(event)"><br>
+
+<div id="d1"></div>
+<button type="button" onmousedown="fun(event)">Click Me!</button>
+
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<p>Test Scroll</p>
+ <script>
+	var t;
+ 	function fun(ev)
+    {
+		/*t=setInterval(function (){
+			scrollBy(0,50);
+			if (scrollY==100)
+				clearInterval(t);
+		}, 500);
+
+
+		setTimeout(function(){
+			window.close();
+		},1000)*/
+
+		//alert (location.href);
+		//location.replace("http://www.google.com")
+		alert(ev.altKey);
+	}
+
+	function testFun(ev)
+	{
+		//alert(ev.key);
+		if(ev.key=="w"&&ev.altKey==true)
+			window.close();
+	}
+	
+	function preventSpace(ev)
+	{
+		//alert(ev.key);
+		if(ev.key==" ")
+			ev.preventDefault();
+	}
+ </script>
+</body>
+</html>

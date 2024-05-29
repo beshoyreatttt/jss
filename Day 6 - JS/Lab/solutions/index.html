@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <body>
+    <h1 id="clock"></h1>
+    <button onclick="inter = setInterval(writeElement,1000);">start</button>
+    <button onclick="clearInterval(inter);">end</button><br />
+    <br />
+    <textarea name="text" onselect="SelectMe();"> </textarea>
 
-<body>
-  <h1 id="clock">
+    <div>
+      <span id="c1"></span>
+      <img src="8lvvnvil0m75nw7yi6iz.jpg" width="20%" id="img1" />
+      <span id="c2"></span>
+      <img
+        src="client-side-image-map-image-maps-part-1.png"
+        width="20%"
+        id="img2"
+      />
+      <span id="c3"></span>
+      <img src="code_tester.png" width="20%" id="img3" />
+    </div>
 
-  </h1>
-  <button onclick="inter = setInterval(writeElement,1000);">start</button>
-  <button onclick="clearInterval(inter);">end</button>
-
-  <script src="index.js">
-
-  </script>
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>

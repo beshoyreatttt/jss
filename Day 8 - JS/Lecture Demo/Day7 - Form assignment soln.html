@@ -1,0 +1,58 @@
+<HTML>
+	<head>
+		<script>
+			function clrTxt()
+			{
+				if(document.getElementById("txtEmail").value=="Your Email")
+					document.getElementById("txtEmail").value="";
+			}
+
+			function validate()
+			{
+				if(document.getElementById("txtEmail").value.length<4)
+				{
+					//alert();
+					document.getElementById("txtEmail").focus();
+					document.getElementById("emailMsg").innerHTML="<b>Not vaild</b>";
+				}
+				else
+				document.getElementById("emailMsg").innerHTML="";
+			}
+
+			function vlaidateLogin(e)
+			{
+				if(document.getElementById("txtEmail").value.length<4)
+				{
+					e.preventDefault();
+					alert("Plz correct the errors first");
+				}
+				else
+					e.target.submit();
+
+			}
+
+			function pageLoad(){
+				var qString=location.search;
+				//alert(qString);
+				if(qString!="")
+				{
+					var frmValues=qString.split("&");
+					document.getElementById("formDiv").innerHTML="Welcome "+frmValues[0].split("=")[1];
+				}
+			};
+		</script>
+	</head>
+	<body onload="pageLoad()">
+		<div id="formDiv">
+			<form action="" method="get" onsubmit="vlaidateLogin(event)">
+				Email <input name="emailInput" id="txtEmail" type="text" value="Your Email"
+				onfocus="clrTxt()" onblur="validate()" autocomplete="off">
+				<span id="emailMsg"></span><br>
+				Pwd <input name="pwd" type="password"><br>
+				<input id="chkRem" type="checkbox"> Remember me <br>
+				<input type="submit" value="Register">
+			</form>
+		</div>
+
+	</body>
+</HTML>

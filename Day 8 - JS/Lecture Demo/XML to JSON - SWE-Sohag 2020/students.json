@@ -1,0 +1,8 @@
+{
+    "ClassName": "WebClass",
+    "Students": [
+        { "ID": 1, "Name": "Linda", "Skills": ["HTML", "CSS"] },
+        { "ID": 2, "Name": "Adam", "Skills": ["JS", "PHP"] }
+    ]
+}
+//Students[1].skills[1]

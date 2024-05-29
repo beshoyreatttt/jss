@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+<body>
+
+
+  <input type="text" id="pID">
+  <input type="button" onclick="showPost();" value="show product" />
+
+
+  <script>
+    function showPost() {
+      let xhr = new XMLHttpRequest();
+      console.log(document.querySelector("#pID").value);
+      xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts/' + document.querySelector("#pID").value, true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          let data = xhr.responseText;
+          console.log(data);
+        }
+      }
+      xhr.send();
+    }
+  </script>
+
+
+</body>
+
+</html>

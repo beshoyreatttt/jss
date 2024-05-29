@@ -1,0 +1,51 @@
+﻿<html>
+
+<head>
+    <title>JSON With AJAX from Web API</title>
+    <script>
+        function getProduct() {
+            var pID = document.getElementById("pID").value;
+            var url = "https://reqres.in/api/product/" + pID;
+            var xhr = new XMLHttpRequest();
+
+            // xhr.open('POST',url,true);
+            // xhr.send({"ID":1});
+
+            // xhr.open('GET',url,false);
+            // var result=xhr.send();//blocking function
+            // console.log(result);
+
+            xhr.open('GET', url, true);
+
+            xhr.onreadystatechange = function() {
+                console.log(xhr.readyState);
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var result = xhr.responseText;
+                    showProduct(result);
+                }
+            }
+
+            xhr.send(); //Non-blocking function
+            console.log("After ajax call");
+        }
+
+        function showProduct(response) {
+            console.log(response);
+            var resJSON = JSON.parse(response);
+            console.log(resJSON);
+            var prod = resJSON.data;
+            console.log(prod);
+            document.getElementById("prod").innerHTML = "Product Name:" + prod.name;
+            document.getElementById("prod").style.color = prod.color;
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="pID">
+    <input type="button" id="button2" onclick="getProduct()" value="show product" />
+    <div id="prod"></div>
+
+</body>
+
+</html>

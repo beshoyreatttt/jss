@@ -1,0 +1,29 @@
+		<script>
+			function fadeOut(img)
+    		{
+				var fade=setInterval(function(){
+                    //alert(img.style.opacity);	
+                    img.style.opacity=parseFloat(img.style.opacity)-0.1;
+                    if(parseFloat(img.style.opacity)<=0.2)
+                        clearInterval(fade);
+					
+				},100);
+    		}
+		</script>
+<body>
+<center>
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+<img name="girl1" src="1.jpg" onmouseover="fadeOut(event.target)"
+   onmouseout="fadeIn(event.target)" style="opacity:1">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<img name="girl2" src="2.jpg" id="m1" width="180" height="280" border="0" 
+onmouseover="fadeOut(event.target)" onmouseout="fadeIn(event.target)" style="opacity:1">
+
+
+</center>
+</body>

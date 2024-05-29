@@ -1,0 +1,14 @@
+{"ClassName":"WClass", 
+    "Students":
+    [
+        {"id": 1, "Name": "Linda", 
+            "Skills":["HTML", "CSS"]},
+        
+        {"id": 2, "Name": "Ahmed", 
+            "Skills":["JS", "CSS"]},
+
+        {"id": 3, "Name": "Ali", 
+            "Skills":["Angular", "CSS"]}
+    
+    ]
+}

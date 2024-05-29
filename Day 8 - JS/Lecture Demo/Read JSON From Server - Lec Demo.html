@@ -1,0 +1,34 @@
+﻿<html>
+<head>
+    <title>JSON With AJAX from Web API</title>
+    <script>
+		function getPosts()
+		{
+			var url="https://jsonplaceholder.typicode.com/posts/" + document.querySelector("#pID").value;
+			console.log(url);
+			var xhr= new XMLHttpRequest();
+			xhr.open('GET',url,true);
+
+			xhr.onreadystatechange= function(){
+				if(xhr.readyState==4 && xhr.status==200)
+				{
+					var data=xhr.responseText;
+					//alert(data);
+					var dataParsed= JSON.parse(data);
+					document.querySelector("#prod").innerHTML= dataParsed.title;
+				}
+			}
+			
+			xhr.send();//non-blocking function
+			//alert("");
+		}
+	
+	</script>
+</head>
+<body>
+	<input type="text" id="pID">
+	<input type="button" id="button2" onclick="getPosts()" value="show product" />
+	<div id="prod"></div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dept name="Java">
+	<Head>
+		<Name>Eng.Ramy</Name>
+		<Tel>456</Tel>
+		<EMail>r@iti.gov.eg</EMail>
+	</Head>
+	<Categories>
+		<Category Name="J2SE">
+			<Courses No="2">
+				<Course>
+					<Name>Java Programming</Name>
+					<Hours>30</Hours>
+				</Course>
+				<Course>
+					<Name>Advanced Java Programming</Name>
+					<Hours>80</Hours>
+				</Course>
+			</Courses>
+		</Category>
+		
+		<Category Name="J2EE">
+			<Courses No="2">
+				<Course>
+					<Name>Java Web Application</Name>
+					<Hours>20</Hours>
+				</Course>
+				<Course>
+					<Name>Building Enterprise App</Name>
+					<Hours>60</Hours>
+				</Course>
+			</Courses>
+		</Category>
+		
+		<Category Name="J2ME">
+			<Courses No="2">
+				<Course>
+					<Name>Mobile Application</Name>
+					<Hours>50</Hours>
+				</Course>
+				<Course>
+					<Name>Advanced Mobile Application</Name>
+					<Hours>70</Hours>
+				</Course>
+			</Courses>
+		</Category>
+	</Categories>
+</Dept>

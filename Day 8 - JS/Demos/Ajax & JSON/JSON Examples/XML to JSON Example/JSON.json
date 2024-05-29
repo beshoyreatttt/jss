@@ -1,0 +1,27 @@
+{
+    "className": "webclass",
+    "students": [
+        {
+            "id": 1,
+            "faculty": "FCI",
+            "Name": "Ali",
+            "isFired": false,
+            "skills": [
+                "HTML",
+                "CSS",
+                "JS"
+            ]
+        },
+        {
+            "id": 2,
+            "faculty": null,
+            "Name": "Ahmed",
+            "isFired": true,
+            "skills": [
+                "JQuery",
+                "Angular",
+                "JS"
+            ]
+        }
+    ]
+}

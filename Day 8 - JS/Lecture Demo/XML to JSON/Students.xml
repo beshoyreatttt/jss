@@ -1,0 +1,11 @@
+<wclass> 
+    <!--My students who took web programming class with me--> 
+    <student id="1"> 
+        <name>Linda Jones</name> 
+        <legacySkill>Access, VB5.0</legacySkill> 
+    </student> 
+    <student id="2"> 
+        <name>Adam Davidson</name> 
+        <legacySkill>Cobol, MainFrame</legacySkill> 
+    </student> 
+</wclass>

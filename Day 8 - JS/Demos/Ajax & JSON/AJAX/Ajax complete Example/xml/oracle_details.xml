@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dept name="Oracle">
+	<Head>
+		<Name>Eng.Mohamed</Name>
+		<Tel>789</Tel>
+		<EMail>m@iti.gov.eg</EMail>
+	</Head>
+	<Categories>
+		<Category Name="DB Development">
+			<Courses No="2">
+				<Course>
+					<Name>Java Programming</Name>
+					<Hours>30</Hours>
+				</Course>
+				<Course>
+					<Name>Advanced Java Programming</Name>
+					<Hours>80</Hours>
+				</Course>
+			</Courses>
+		</Category>
+		
+		<Category Name="J2EE">
+			<Courses No="2">
+				<Course>
+					<Name>Java Web Application</Name>
+					<Hours>20</Hours>
+				</Course>
+				<Course>
+					<Name>Building Enterprise App</Name>
+					<Hours>60</Hours>
+				</Course>
+			</Courses>
+		</Category>
+		
+		<Category Name="J2ME">
+			<Courses No="2">
+				<Course>
+					<Name>Mobile Application</Name>
+					<Hours>50</Hours>
+				</Course>
+				<Course>
+					<Name>Advanced Mobile Application</Name>
+					<Hours>70</Hours>
+				</Course>
+			</Courses>
+		</Category>
+	</Categories>
+</Dept>

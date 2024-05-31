@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <script>
+        //Scope-level declaration (let, const)
+        let x = 10; //not Hoisted
+        const PI = 3.14; //Not hoisted
+
+
+        for (var i = 0; i < 5; i++) { // i is global
+            //console.log(i);
+        }
+
+        function abc() {
+            for (var i = 0; i < 5; i++) { //i is local variable
+                //console.log(i);
+            }
+        }
+
+        for (let j = 0; j < 5; j++) {
+
+        }
+        // console.log(i);
+        // console.log(j);
+        /////////////////////////////////
+        //Function default paramters
+        function sum(x = 0, y = 0) {
+            return x + y;
+        }
+
+        //console.log(sum())
+        /////////////////////////////
+        let arr = [5, 10, 20, 15, 25];
+        // for (let elem in arr) {
+        //     console.log(arr[elem]);
+        // }
+        for (let elem of arr) {
+            //console.log(elem);
+        }
+        ///////////////////////////
+        //Classes
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            static whoAmI() {
+                console.log("I am a Person");
+            }
+
+            show() {
+                //console.log("Person Name: " + this.name + ", and age: "+ this.age)
+                //String literals
+                console.log(`Person Name: ${this.name},
+								and age: ${this.age}`);
+            }
+        }
+        // Person.whoAmI();
+
+        // let p1 = new Person("aa", 10);
+        // p1.show();
+
+        class Employee extends Person {
+            constructor(name, age, jobTitle, salary) {
+                super(name, age);
+                this.jobTitle = jobTitle;
+                this.salary = salary;
+            }
+
+            get currentSalary() {
+                return this.salary * 110 / 100;
+            }
+
+            set currentSalary(val) {
+                this.salary = val;
+            }
+
+            show() {
+                super.show();
+                console.log(`Jobtitle: ${this.jobTitle}, salary: ${this.salary}`);
+            }
+        }
+
+        // let e1 = new Employee("bb", 22, "Developer", 10000);
+        // e1.show();
+        // console.log(e1.currentSalary);
+        // e1.currentSalary = 4000;
+        // console.log(e1.currentSalary);
+        ///////////////////////
+        //Arrow functions
+        let fun = x => x = 1;
+        let fun2 = (x, y) => x + y;
+        let fun3 = () => "Hello";
+        let fun4 = () => {
+            console.log("Hi");
+            return 0;
+        }
+
+        let numbers = [10, 5, 20, 30, 25, 40, 1, 100];
+        // numbers.sort(function(a, b) {
+        //     // if(a==b)
+        //     // 	return 0;
+        //     // else if (a>b)
+        //     // 	return 1;
+        //     // else
+        //     // 	return -1;
+        //     return a-b;
+        // });
+
+        numbers.sort((a, b) => a - b);
+        console.log(numbers);
+
+        var foundNo = numbers.find(elem => elem > 30);
+        console.log(foundNo);
+
+        var foundNos = numbers.filter(elem => elem > 30);
+        console.log(foundNos);
+
+        //
+        console.log("Spread operator");
+        console.log(numbers);
+        console.log(...numbers);
+        //
+        console.log("Generator");
+
+        function* idMaker() {
+            var index = 0;
+            while (index < 3)
+                yield index++;
+        }
+
+        var gen = idMaker();
+
+        for (let item of gen) {
+            console.log(item);
+        }
+    </script>
+
+</head>
+
+<body>
+    <script>
+        // console.log(i);
+    </script>
+</body>
+
+</html>

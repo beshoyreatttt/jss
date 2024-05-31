@@ -1,0 +1,1 @@
+This feature is not implemented in any browsers natively at this time. It is implemented in many transpilers, such as the Traceur Compiler, Babel or Rollup.

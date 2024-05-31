@@ -1,0 +1,206 @@
+<html>
+
+<head>
+    <script>
+        'use strict'
+        // //x=20;//global variable
+
+        // var employeeName;
+        // //employeename="fsdf";
+        // //var x=0;// global variable
+
+        // //console.log(x);
+
+        // //z=10;// Variable with let, const aren't hoisted.
+        // let z;
+
+        // function doSomeThing() {
+        //     //'use strict'
+        //     var y; // Local variable
+        //     a=10;//Global variable //window.a=10;
+        //     for (let counter = 0; counter < 10; coutner++) 
+        //     {
+        //         //Using var, variable is local scope
+        //          //Using let, variable is block scope
+        //     }
+        // }
+
+        // doSomeThing();
+
+        // for (let counter = 0; counter < 10; counter++) 
+        // {
+        //     //Using var, variable is Global scope
+        //     //Using let, variable is block scope
+        //     //console.log(counter);
+        // }
+
+        // //console.log(counter);
+        // const PI=3.14;
+        // //PI=33;
+
+        // let person={
+        //     name: "AA",
+        //     faculty: "ITI",
+        //     jobTitle:"Developer"
+        // }
+
+        // //console.log("Person name is: " + person.name + ", and his faculty is:" + person.faculty+ ", and his job title is: "+ person.jobTitle);
+        // console.log(`Person name is: ${person.name},
+        //     and his faculty is: ${person.faculty}
+        //     and his job is: ${person.jobTitle}`);
+
+        // let myArr=[10,20,30,40,50];
+
+        // for (let i in myArr)
+        // {
+        //     //console.log(i);
+        //     //console.log(myArr[i]);
+        // }
+
+        // for (let i of myArr)
+        // {
+        //     console.log(i);
+        // }
+
+        let person={
+            name: "AA",
+            faculty: "ITI",
+            jobTitle:"Developer"
+        } // literal object
+
+        function Emp(name, jobTile)// custom Object
+        {
+            this.name=name;
+            this.jobTitle=jobTile;
+            this.show=function(){
+                console.log(`Person name is: ${this.name},
+                    and his job is: ${this.jobTitle}`);
+            }
+        }
+
+        // let p1=new Emp("AA", ".Net Developer");
+        // p1.show();
+
+        // let p2=new Emp("BB", "Frontedn Developer");
+        // p2.show();
+
+
+        // class Person
+        // {
+        //     constructor(name="", age=18)
+        //     {
+        //         this.name=name;
+        //         this.age=age;
+        //     }
+
+        //     show(){
+        //         console.log(`Name is: ${this.name},
+        //             and his age is: ${this.age}`);
+        //     }
+        // }
+
+        // let p3= new Person("DD");
+        // p3.age=25;
+        // p3.show();
+
+        // class Employee extends Person{
+        //     #ID;
+        //     jobTitle;
+        //     constructor(name, age,jobTitle)
+        //     {
+        //         super(name,age);
+        //         // name=name
+        //         // age=age
+        //         this.jobTitle=jobTitle;
+        //         this.#ID=1;
+        //     }
+
+        //     show()
+        //     {
+        //         super.show();
+        //         console.log(`Employee Jobtitle is ${this.jobTitle}`);
+        //     }
+
+        //     static whoIAm(){
+        //         console.log("I am Employee");
+        //     }
+        // }
+
+        // var e1=new Employee("TT", 44, "Developer");
+        // e1.show();
+        // Employee.whoIAm();
+        // //console.log(e1.ID);
+
+        //Arrow Function
+        function saySomething0()
+        {
+           return "test";
+        }
+        saySomething0();
+
+        let saySomething=x=>x*10;
+        //console.log(saySomething(5));
+
+        let sum=(x,y)=>x+y;
+        //console.log(sum(5,6));
+
+        let sayHello=()=>{
+            console.log("Hello world");
+            return "test";
+        }
+
+        //var x=sayHello();
+
+        let numbersArr=[5,2,1,20,10,100];
+        // numbersArr.sort(function(a,b){
+        //     return a-b;
+        //     // if(a==b)
+        //     //     return 0;
+        //     // else if (a>b)
+        //     //     return 1;
+        //     // else
+        //     //     return -1;
+        // });
+
+        numbersArr.sort((a,b)=>a-b);
+        //console.log(...numbersArr);
+
+        // let searchElem=numbersArr.find((elem)=>elem>10);
+        // console.log(searchElem);
+
+        // let searchElems=numbersArr.filter((elem)=>elem>10);
+        // console.log(...searchElems);
+
+        class Person
+        {
+            constructor(name="", age=18)
+            {
+                this.name=name;
+                this.age=age;
+
+                setInterval(()=>{
+                    this.age++;
+                },1000);
+            }
+            show(){
+                console.log(`Name is: ${this.name},
+                    and his age is: ${this.age}`);
+            }
+        }
+
+        var p1=new Person("AA", 0);
+
+        setTimeout(function(){
+            console.log(p1.age);
+        },3500);
+    </script>
+
+</head>
+
+<body>
+    <script>
+        //x = 10;
+    </script>
+</body>
+
+</html>
